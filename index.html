@@ -2,13 +2,17 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<!-- This site is hosted on Netlify. Anyone can build and deploy a site
-     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=b20a0361-887c-4f27-8fc7-cd27e31294ce
-     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#082b50">
 <meta name="description" content="Villar Boletos: gestión y venta de boletos aéreos. Consulta rutas, promociones y atención personalizada.">
 <title>VILLAR BOLETOS | Tu próximo destino comienza aquí</title>
+<link rel="canonical" href="https://villarfamily.github.io/villarventaboletos/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VILLAR BOLETOS | Tu próximo destino comienza aquí">
+<meta property="og:description" content="Gestión y venta de boletos aéreos con atención personalizada en Camagüey, Cuba.">
+<meta property="og:image" content="https://villarfamily.github.io/villarventaboletos/assets/portada-villar-boletos.webp">
+<meta property="og:url" content="https://villarfamily.github.io/villarventaboletos/">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -222,18 +226,17 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 </main>
 <section class="reviews-section" id="resenas"><div class="wrap"><div class="section-head"><div class="kicker">Tu experiencia nos importa</div><h2>Nuestros clientes hablan de nosotros</h2><p>Tu opinión ayuda a otras personas a viajar con mayor confianza. Gracias por compartir tu experiencia con VILLAR BOLETOS.</p></div>
 <div class="reviews-card"><div class="review-empty">Las opiniones se publican después de ser revisadas y aprobadas por nuestro equipo.</div>
-<form class="review-form" name="resenas-clientes" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="https://villarventaboletos.netlify.app/gracias-resena">
-<input type="hidden" name="form-name" value="resenas-clientes"><p hidden><label>No completar: <input name="bot-field"></label></p>
+<form class="review-form" name="resenas-clientes" method="POST" enctype="multipart/form-data" action="https://formspree.io/f/xqpqwjbl">
+<input type="hidden" name="_next" value="https://villarfamily.github.io/villarventaboletos/gracias.html"><p hidden><label>No completar: <input name="_gotcha"></label></p>
 <div class="review-grid"><div class="review-field"><label for="reviewName">Nombre y apellidos</label><input id="reviewName" name="nombre" type="text" autocomplete="name" maxlength="90" required></div><div class="review-field"><label for="reviewRating">Calificación</label><select id="reviewRating" name="calificacion" required><option value="">Selecciona estrellas</option><option value="5">★★★★★ · Excelente</option><option value="4">★★★★☆ · Muy bueno</option><option value="3">★★★☆☆ · Bueno</option><option value="2">★★☆☆☆ · Regular</option><option value="1">★☆☆☆☆ · Necesita mejorar</option></select></div></div>
 <div class="review-field"><label for="reviewText">Tu opinión</label><textarea id="reviewText" name="comentario" minlength="10" maxlength="1200" placeholder="Cuéntanos cómo fue tu experiencia con nuestro equipo..." required></textarea></div>
-<div class="review-field"><label for="reviewPhoto">Tu fotografía (opcional)</label><input id="reviewPhoto" name="fotografia" type="file" accept="image/jpeg,image/png,image/webp"><span class="review-help">Si lo deseas, puedes adjuntar una fotografía JPG, PNG o WEBP. Este campo no es obligatorio; no se aceptan vídeos.</span></div>
-<label class="review-consent"><input type="checkbox" name="autorizacion_publicacion" value="Acepto" required><span>Autorizo a VILLAR BOLETOS a revisar y, si aprueba esta reseña, publicar mi nombre, calificación y comentario, y la fotografía únicamente si la he adjuntado, en su página web.</span></label>
+<label class="review-consent"><input type="checkbox" name="autorizacion_publicacion" value="Acepto" required><span>Autorizo a VILLAR BOLETOS a revisar y, si aprueba esta reseña, publicar mi nombre, calificación y comentario en su página web.</span></label>
 <button class="btn review-submit" type="submit">Enviar mi reseña</button><p class="review-help">Tu reseña no aparecerá inmediatamente. Luis o Liusbel la revisarán antes de publicarla.</p>
 </form></div></div></section>
 
 <section class="reservation-cta bottom"><div class="wrap"><h2>¿YA TIENES EN MENTE TU PRÓXIMO DESTINO?</h2><p>No esperes más. Haz clic y envíanos los datos de tu viaje; te atenderemos personalmente.</p><a class="btn" href="index.html#reserva">✈ HAZ CLIC AQUÍ PARA SOLICITAR TU RESERVA</a></div></section>
 
-<section class="visitor-counter" aria-label="Contador de visitas"><strong>🌎 VISITAS A VILLAR BOLETOS</strong><a href="https://hits.sh/villarventaboletos.netlify.app/" target="_blank" rel="noopener" aria-label="Ver estadísticas de visitas"><img src="https://hits.sh/villarventaboletos.netlify.app.svg?view=total&style=for-the-badge&label=VISITAS" alt="Contador de visitas totales a Villar Boletos"></a></section>
+<section class="visitor-counter" aria-label="Contador de visitas"><strong>🌎 VISITAS A VILLAR BOLETOS</strong><a href="https://hits.sh/villarfamily.github.io/villarventaboletos/" target="_blank" rel="noopener" aria-label="Ver estadísticas de visitas"><img src="https://hits.sh/villarfamily.github.io/villarventaboletos.svg?view=total&style=for-the-badge&label=VISITAS" alt="Contador de visitas totales a Villar Boletos"></a></section>
 <section class="team-section"><div class="wrap"><div class="section-head"><div class="kicker">Nuestro equipo</div><h2>Juntos por un mismo objetivo</h2><p>Un equipo familiar a tu lado para acompañarte en cada viaje.</p></div><img class="team-art" src="assets/villar-family-contactos.webp" alt="Villar & Family Group, equipo familiar de Villar Boletos" loading="eager" decoding="async" fetchpriority="high"><div class="team-contacts"><strong>Contactos actualizados de atención 24/7</strong><p>Luis: <a href="https://wa.me/5353182091">+53 53182091</a> · Liusbel: <a href="https://wa.me/5355447804">+53 55447804</a> · Ana: <a href="https://wa.me/5356243038">+53 56243038</a></p><p>Correo de Liusbel: <a href="mailto:villarliusbel@gmail.com">villarliusbel@gmail.com</a></p></div></div></section>
 <footer><div class="wrap foot"><span>© <span id="year"></span> <strong>VILLAR BOLETOS</strong> · Gestión y venta de boletos aéreos</span><span>En colaboración con <strong>Caribbean Passion Jamaica</strong></span></div></footer>
 <div class="lightbox" id="lightbox" aria-label="Vista ampliada de promoción"><button class="close" id="close" aria-label="Cerrar">×</button><img id="zoomed" alt="Imagen promocional ampliada"></div>
@@ -271,4 +274,4 @@ document.getElementById('close').addEventListener('click',closeBox);
 box.addEventListener('click',e=>{if(e.target===box)closeBox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
 </script>
-</body></html><script async src=".netlify/scripts/hud%3Fvariant=public" data-nf-variant="public" data-netlify-site-id="b20a0361-887c-4f27-8fc7-cd27e31294ce" data-app-host="app.netlify.com" data-account-tier="free"></script>
+</body></html>
