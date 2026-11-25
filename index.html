@@ -59,7 +59,9 @@ h2{font:800 clamp(27px,3.5vw,38px)/1.15 "Playfair Display",Georgia,serif;color:v
 .services{background:#fff}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .service{border:1px solid var(--line);border-radius:15px;padding:21px;background:#fbfcfe}.service .ico{font-size:25px}.service h3{color:var(--navy);font-size:16px;margin:10px 0 6px}.service p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
 .payments{background:linear-gradient(120deg,#082b50,#104d78);color:white}.payments h2{color:white}.payments .section-head p{color:#d8e4ee}
-.pay-list{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}.pay{border:1px solid #ffffff40;background:#ffffff12;padding:12px 18px;border-radius:12px;font-weight:700;font-size:13px}
+.pay-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:900px;margin:28px auto 0}
+.pay{min-height:138px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;border:1px solid #ffffff55;background:linear-gradient(145deg,#ffffff20,#ffffff0b);padding:17px 12px;border-radius:16px;box-shadow:0 9px 22px #00172b33}
+.pay-icon{font-size:30px;line-height:1.1}.pay strong{font-size:15px;color:#fff}.pay small{font-size:12px;color:#f4d992;font-weight:700;letter-spacing:.3px}
 .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:stretch}
 .contact-panel,.qr-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 8px 25px #17334d08}
 .contact-list{display:grid;gap:10px;margin-top:18px}
@@ -70,17 +72,11 @@ h2{font:800 clamp(27px,3.5vw,38px)/1.15 "Playfair Display",Georgia,serif;color:v
 .collab{margin-top:16px;color:#a77a22;font-weight:800;font-size:13px}
 footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.foot strong{color:#f0cc79}
 .lightbox{position:fixed;inset:0;background:#061522ed;display:none;align-items:center;justify-content:center;padding:22px;z-index:50}.lightbox.open{display:flex}.lightbox img{max-width:min(100%,1100px);max-height:90vh;object-fit:contain;background:white;border-radius:10px}.close{position:absolute;right:20px;top:15px;border:0;background:#fff;color:#10263d;border-radius:50%;width:42px;height:42px;font-size:25px;cursor:pointer}
-@media(max-width:850px){.hero{grid-template-columns:1fr;gap:20px}.cover-frame{max-width:620px;margin:auto}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}}
-@media(max-width:600px){.wrap{width:min(100% - 26px,1160px)}.topline .wrap{justify-content:center;text-align:center}.hero{padding:28px 0}.hero-copy{text-align:center}.hero-copy p{margin-inline:auto}.hero-actions{justify-content:center}.navinner{min-height:58px}.navlinks a:not(.navcta){display:none}.grid,.service-grid,.contact-grid{grid-template-columns:1fr}section{padding:50px 0}.card img{height:260px}.contact-panel,.qr-panel{padding:20px}}
-.pay-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:900px;margin:28px auto 0}
-.pay{min-height:138px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;border:1px solid #ffffff55;background:linear-gradient(145deg,#ffffff20,#ffffff0b);padding:17px 12px;border-radius:16px;box-shadow:0 9px 22px #00172b33}
-.pay-icon{font-size:30px;line-height:1.1}.pay strong{font-size:15px;color:#fff}.pay small{font-size:12px;color:#f4d992;font-weight:700;letter-spacing:.3px}
 .team-section{background:linear-gradient(180deg,#f5f8fb,#fff);padding:48px 0 42px}
 .team-art{display:block;width:min(100%,650px);height:auto;margin:0 auto;border-radius:18px;box-shadow:0 16px 40px #082b5020;border:1px solid #e3eaf1}
 .team-contacts{max-width:650px;margin:14px auto 0;padding:15px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;text-align:center;color:var(--muted);font-size:13px;line-height:1.6}.team-contacts strong{color:var(--navy)}.team-contacts p{margin:6px 0}.team-contacts a{color:#0c5688;font-weight:800;text-decoration:none}
 .visitor-counter{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 12px 30px;text-align:center;background:#fff}
 .visitor-counter strong{color:var(--navy);font-size:14px;letter-spacing:.5px}.visitor-counter img{display:block;width:auto;max-width:100%;height:34px}
-@media(max-width:700px){.pay-list{grid-template-columns:repeat(2,minmax(0,1fr))}.pay{min-height:125px}}
 .reservation-section{background:linear-gradient(180deg,#f5f8fb,#eef3f8)}
 .reservation-card{max-width:900px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:clamp(18px,4vw,34px);box-shadow:0 12px 35px #17334d0b}
 .reservation-intro{color:var(--muted);line-height:1.6;text-align:center;max-width:690px;margin:0 auto 25px}
@@ -95,7 +91,6 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 .counter{display:flex;align-items:center;gap:10px}.counter button{width:34px;height:34px;border:1px solid #d7e0e9;background:#fff;border-radius:50%;font-size:20px;color:var(--navy);cursor:pointer}.counter output{min-width:22px;text-align:center;font-weight:900;font-variant-numeric:tabular-nums}
 .file-note{font-size:12px;color:var(--muted);line-height:1.55}.file-list{font-size:12px;color:#31516d;margin-top:7px;overflow-wrap:anywhere}
 .reservation-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}.reservation-actions .btn{border:0;cursor:pointer}.btn.dark{background:var(--navy);color:#fff}.send-options{display:none;margin-top:20px;padding:18px;border-radius:14px;background:#eefaf2;border:1px solid #c6e9d1}.send-options.show{display:block}.send-options p{font-size:13px;line-height:1.55;color:#24563a}.send-buttons{display:flex;gap:10px;flex-wrap:wrap}.send-buttons a{background:#13864a;color:white;padding:12px 15px;border-radius:999px;text-decoration:none;font-weight:800;font-size:13px}.success-note{display:none;text-align:center;color:#17643a;font-weight:800;padding:12px}.success-note.show{display:block}
-@media(max-width:600px){.form-grid{grid-template-columns:1fr}.form-block{padding:14px}.reservation-actions .btn{width:100%}.counter-row{gap:6px}}
 .reviews-section{background:#fff;padding:62px 0}.reviews-card{max-width:850px;margin:auto;background:#f9fbfd;border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,30px);box-shadow:0 10px 30px #17334d0a}
 .review-form{display:grid;gap:14px}.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.review-field{display:grid;gap:7px}.review-field label{font-weight:800;font-size:13px;color:#344b61}.review-field input,.review-field select,.review-field textarea{width:100%;border:1px solid #d7e0e9;border-radius:10px;padding:12px;font:inherit;background:white;color:var(--ink)}.review-field textarea{min-height:125px;resize:vertical}.review-help{font-size:12px;color:var(--muted);line-height:1.55}.review-submit{border:0;cursor:pointer;background:var(--navy);color:white}.review-consent{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:#526579;line-height:1.5}.review-consent input{margin-top:3px}.review-empty{border:1px dashed #cbd7e2;background:#fff;border-radius:12px;padding:17px;text-align:center;color:var(--muted);font-size:13px;margin-bottom:20px}
 :root{--form-cream:#fbf7f0;--form-sand:#efe4d5;--form-amber:#b9823f;--form-amber-dark:#8d612e;--form-ink:#3f4b50;--form-sage:#eaf0e9;--form-border:#dfd3c4}
@@ -115,9 +110,13 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 .review-form .review-help{color:#6d716b}
 .review-form .review-empty{background:#fbf7f0;border-color:#d8c8b5;color:#68736c}
 .review-form input[type=file]{padding:10px;background:#f8f2e9;border:1px dashed #cdb99f}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:20px}.cover-frame{max-width:620px;margin:auto}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{gap:13px}}
+@media(max-width:700px){.pay-list{grid-template-columns:repeat(2,minmax(0,1fr))}.pay{min-height:125px}}
 @media(max-width:640px){.review-form{padding:15px}}
+@media(max-width:600px){.wrap{width:min(100% - 26px,1160px)}.topline .wrap{justify-content:center;text-align:center}.hero{padding:28px 0}.hero-copy{text-align:center}.hero-copy p{margin-inline:auto}.hero-actions{justify-content:center}.navinner{min-height:58px}.navlinks a:not(.navcta){display:none}.grid,.service-grid,.contact-grid{grid-template-columns:1fr}section{padding:50px 0}.card img{height:260px}.contact-panel,.qr-panel{padding:20px}.form-grid{grid-template-columns:1fr}.form-block{padding:14px}.reservation-actions .btn{width:100%}.counter-row{gap:6px}}
 </style>
-</head><body>
+</head>
+<body>
 <div class="topline"><div class="wrap"><span>Atención personalizada · Trato presencial</span><span>Camagüey, Cuba · Servicio para clientes dentro y fuera de Cuba</span></div></div>
 <header id="inicio"><div class="wrap hero">
   <div class="hero-copy">
@@ -129,7 +128,6 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
   <div class="cover-frame"><img src="assets/portada-villar-boletos.webp" alt="Portada original de Villar Boletos con contactos y código QR" loading="eager" decoding="async" fetchpriority="high"></div>
 </div></header>
 <nav><div class="wrap navinner"><a class="brand" href="index.html#inicio">VILLAR <span>BOLETOS</span></a><div class="navlinks"><a href="index.html#promociones">Promociones</a><a href="index.html#reserva">Solicita tu reserva</a><a href="index.html#servicios">Servicios</a><a href="index.html#contacto">Contactos</a><a href="index.html#resenas">Reseñas</a><a class="navcta" href="https://wa.me/5353182091" target="_blank" rel="noopener">WhatsApp</a></div></div></nav>
-
 <main>
 <section id="promociones"><div class="wrap">
   <div class="section-head"><div class="kicker">Explora las opciones</div><h2>Rutas y promociones aéreas</h2><p>Consulta las ofertas disponibles y solicita una cotización personalizada. Podemos orientarte sobre otras rutas según tus necesidades.</p></div>
@@ -146,9 +144,7 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
     <article class="card"><img src="assets/intercaribbean.webp" alt="Vuelos InterCaribbean Santiago de Cuba a Kingston" data-zoom loading="lazy" decoding="async"><div class="promo-caption">Trato presencial en la provincia de Camagüey</div><div class="card-body"><div class="tag">09 · Cuba – Jamaica</div><h3>INTERCARIBBEAN</h3><p>Conexión Santiago de Cuba–Kingston. Confirma fecha de salida, conexiones y tarifa antes de reservar.</p><a class="small-link" href="https://wa.me/5353182091?text=Hola%2C%20quiero%20consultar%20InterCaribbean%20a%20Kingston">Consultar vuelo →</a></div></article>
   </div>
 </div></section>
-
 <section class="reservation-cta top"><div class="wrap"><h2>✈ ¡TU PRÓXIMO VIAJE COMIENZA AQUÍ!</h2><p>Haz clic en el botón y completa nuestro formulario para solicitar la gestión de tu reserva.</p><a class="btn" href="index.html#reserva">QUIERO SOLICITAR MI RESERVA →</a></div></section>
-
 <section class="reservation-section" id="reserva"><div class="wrap">
   <div class="section-head"><div class="kicker">Planifica tu próximo viaje</div><h2>Solicita tu reserva</h2></div>
   <p class="reservation-intro">Completa los datos de tu viaje y nuestro equipo recibirá tu solicitud por WhatsApp para revisar las opciones y atenderte personalmente.</p>
@@ -178,21 +174,18 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
     <div class="send-options" id="sendOptions"><strong>Atención 24/7</strong><p>Elige el número de WhatsApp al que deseas enviar tu solicitud. Para que recibamos los pasaportes, recuerda adjuntarlos manualmente en WhatsApp antes de pulsar Enviar.</p><div class="send-buttons"><a id="sendPrimary" href="index.html#" target="_blank" rel="noopener">+53 53182091</a><a id="sendSecondary" href="index.html#" target="_blank" rel="noopener">+53 55447804</a><a id="sendTertiary" href="index.html#" target="_blank" rel="noopener">+53 56243038</a></div></div>
   </div>
 </div></section>
-
 <section class="services" id="servicios"><div class="wrap"><div class="section-head"><div class="kicker">A tu lado en cada paso</div><h2>¿Qué podemos gestionar?</h2><p>Un servicio pensado para que puedas consultar, comparar y organizar tu viaje con acompañamiento personal.</p></div>
 <div class="service-grid">
 <div class="service"><div class="ico">🛫</div><h3>Gestión de boletos</h3><p>Orientación y gestión de opciones de vuelo según tu ruta, fechas y necesidades.</p></div>
 <div class="service"><div class="ico">📲</div><h3>Atención directa</h3><p>Contacto por WhatsApp, correo y trato presencial para resolver tus consultas.</p></div>
 <div class="service"><div class="ico">🔎</div><h3>Verificación del boleto</h3><p>Entregamos boletos con código QR para que puedas verificar por ti mismo el estado de tu pasaje.</p></div>
 </div></div></section>
-
 <section class="payments"><div class="wrap"><div class="section-head"><div class="kicker" style="color:#f0cc79">Facilidades de pago</div><h2>Consulta las formas de pago</h2><p>Las opciones pueden variar según la ruta y la promoción. Confirma cuáles aplican a tu reserva antes de pagar.</p></div><div class="pay-list">
 <div class="pay"><span class="pay-icon">💵</span><strong>Efectivo USD</strong><small>En Cuba</small></div>
 <div class="pay"><span class="pay-icon">💵</span><strong>Efectivo USD</strong><small>En Destino</small></div>
 <div class="pay"><span class="pay-icon">💳</span><strong>Zelle</strong><small>Pago digital</small></div>
 <div class="pay"><span class="pay-icon">🏦</span><strong>Transferencia</strong><small>Bancaria</small></div>
 </div></div></section>
-
 <section id="contacto"><div class="wrap"><div class="section-head"><div class="kicker">Estamos para ayudarte</div><h2>Contacta con Villar Boletos</h2><p>Cuéntanos a dónde deseas viajar y te ayudaremos a consultar las opciones disponibles.</p></div>
 <div class="contact-grid"><div class="contact-panel"><div class="tag">Gestor de Ventas · Luís Villar Robinson</div><div class="contact-list">
 <strong style="display:block;color:var(--navy);margin:4px 0 8px">Atención 24/7 · WhatsApp</strong>
@@ -219,9 +212,7 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 <label class="review-consent"><input type="checkbox" name="autorizacion_publicacion" value="Acepto" required><span>Autorizo a VILLAR BOLETOS a revisar y, si aprueba esta reseña, publicar mi nombre, calificación y comentario en su página web.</span></label>
 <button class="btn review-submit" type="submit">Enviar mi reseña</button><p class="review-help">Tu reseña no aparecerá inmediatamente. Luis o Liusbel la revisarán antes de publicarla.</p>
 </form></div></div></section>
-
 <section class="reservation-cta bottom"><div class="wrap"><h2>¿YA TIENES EN MENTE TU PRÓXIMO DESTINO?</h2><p>No esperes más. Haz clic y envíanos los datos de tu viaje; te atenderemos personalmente.</p><a class="btn" href="index.html#reserva">✈ HAZ CLIC AQUÍ PARA SOLICITAR TU RESERVA</a></div></section>
-
 <section class="visitor-counter" aria-label="Contador de visitas"><strong>🌎 VISITAS A VILLAR BOLETOS</strong><a href="https://hits.sh/villarfamily.github.io/villarventaboletos/" target="_blank" rel="noopener" aria-label="Ver estadísticas de visitas"><img src="https://hits.sh/villarfamily.github.io/villarventaboletos.svg?view=total&style=for-the-badge&label=VISITAS" alt="Contador de visitas totales a Villar Boletos"></a></section>
 <section class="team-section"><div class="wrap"><div class="section-head"><div class="kicker">Nuestro equipo</div><h2>Juntos por un mismo objetivo</h2><p>Un equipo familiar a tu lado para acompañarte en cada viaje.</p></div><img class="team-art" src="assets/villar-family-contactos.webp" alt="Villar & Family Group, equipo familiar de Villar Boletos" loading="eager" decoding="async" fetchpriority="high"><div class="team-contacts"><strong>Contactos actualizados de atención 24/7</strong><p>Luis: <a href="https://wa.me/5353182091">+53 53182091</a> · Liusbel: <a href="https://wa.me/5355447804">+53 55447804</a> · Ana: <a href="https://wa.me/5356243038">+53 56243038</a></p><p>Correo de Liusbel: <a href="mailto:villarliusbel@gmail.com">villarliusbel@gmail.com</a></p></div></div></section>
 <footer><div class="wrap foot"><span>© <span id="year"></span> <strong>VILLAR BOLETOS</strong> · Gestión y venta de boletos aéreos</span><span>En colaboración con <strong>Caribbean Passion Jamaica</strong></span></div></footer>
@@ -252,19 +243,10 @@ document.getElementById('reservationForm').addEventListener('submit',e=>{
  document.getElementById('sendOptions').scrollIntoView({behavior:'smooth',block:'center'});
 });
 const box=document.getElementById('lightbox'),zoom=document.getElementById('zoomed');
-document.querySelectorAll('[data-zoom]').forEach(img=>{
-  img.style.cursor='zoom-in';
-  img.addEventListener('click',()=>{
-    if(!img.src){alert('Imagen no disponible');return;}
-    zoom.src=img.src;
-    zoom.alt=img.alt||'Imagen promocional';
-    box.classList.add('open');
-  });
-});
+document.querySelectorAll('[data-zoom]').forEach(img=>img.addEventListener('click',()=>{zoom.src=img.src;zoom.alt=img.alt;box.classList.add('open')}));
 function closeBox(){box.classList.remove('open');zoom.src=''}
 document.getElementById('close').addEventListener('click',closeBox);
 box.addEventListener('click',e=>{if(e.target===box)closeBox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
 </script>
-</body>
-</html>
+</body></html>
