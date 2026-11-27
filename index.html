@@ -49,7 +49,6 @@ h2{font:800 clamp(27px,3.5vw,38px)/1.15 "Playfair Display",Georgia,serif;color:v
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #17334d0a;display:flex;flex-direction:column;transition:.2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 15px 32px #17334d14}
-/* IMÁGENES DE RUTAS MÁS ANCHAS Y PROTAGONISTAS */
 .card img{width:100%;height:auto;min-height:250px;object-fit:cover;background:#f4f7fa;cursor:zoom-in;display:block}
 .promo-caption{margin:0;padding:8px 12px 10px;text-align:center;background:#fffaf0;color:#79591e;font-size:12px;font-weight:800;letter-spacing:.15px;border-bottom:1px solid var(--line)}
 .card-body{padding:18px 19px 20px;display:flex;flex-direction:column;flex:1}
@@ -79,7 +78,7 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 .visitor-counter{display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 12px 30px;text-align:center;background:#fff}
 .visitor-counter strong{color:var(--navy);font-size:14px;letter-spacing:.5px}.visitor-counter img{display:block;width:auto;max-width:100%;height:34px}
 
-/* FORMULARIO MÁS PROFESIONAL Y COMPACTO */
+/* FORMULARIO */
 .reservation-section{background:linear-gradient(180deg,#f5f8fb,#eef3f8)}
 .reservation-card{max-width:800px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,4vw,30px);box-shadow:0 10px 30px rgba(8,43,80,.06)}
 .reservation-intro{color:var(--muted);line-height:1.6;text-align:center;max-width:650px;margin:0 auto 20px;font-size:14px}
@@ -119,6 +118,10 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 /* BOTON WHATSAPP RESEÑAS */
 .btn-wa-review{background:#25d366;color:#fff;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:999px;font-weight:800;font-size:15px;text-decoration:none;border:none;cursor:pointer;margin-top:10px;transition:.2s;box-shadow:0 4px 15px rgba(37,211,102,0.3)}
 .btn-wa-review:hover{transform:translateY(-2px);background:#1eb956}
+
+/* ✅ CAMBIO: Botón "Dejar una reseña" (hero) */
+.btn.resena{background:var(--green);color:#fff;border:1px solid #0e6b3b}
+.btn.resena:hover{background:#0e6b3b;color:#fff}
 </style>
 </head>
 <body>
@@ -136,11 +139,17 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
     <div class="eyebrow">VILLAR BOLETOS</div>
     <h1>Tu próximo destino comienza aquí.</h1>
     <p>Gestión y venta de boletos aéreos con atención cercana y personalizada. Te ayudamos a encontrar la opción que mejor se adapte a tu viaje.</p>
-    <div class="hero-actions"><a class="btn gold" href="index.html#reserva">✈ ¡Solicita tu reserva aquí!</a><a class="btn ghost" href="index.html#promociones">Ver promociones</a><a class="btn ghost" href="https://wa.me/5353182091?text=Hola%2C%20quiero%20consultar%20un%20vuelo" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
+    <!-- ✅ CAMBIO: href corregido a #reserva + añadido botón "⭐ Dejar una reseña ⭐" -->
+    <div class="hero-actions">
+      <a class="btn gold" href="#reserva">✈ ¡Solicita tu reserva aquí!</a>
+      <a class="btn resena" href="#resenas">⭐ Dejar una reseña ⭐</a>
+      <a class="btn ghost" href="#promociones">Ver promociones</a>
+      <a class="btn ghost" href="https://wa.me/5353182091?text=Hola%2C%20quiero%20consultar%20un%20vuelo" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+    </div>
   </div>
   <div class="cover-frame"><img src="portada-villar-boletos.webp" alt="Portada original de Villar Boletos con contactos y código QR" loading="eager" decoding="async" fetchpriority="high"></div>
 </div></header>
-<nav><div class="wrap navinner"><a class="brand" href="index.html#inicio">VILLAR <span>BOLETOS</span></a><div class="navlinks"><a href="index.html#promociones">Promociones</a><a href="index.html#reserva">Solicita tu reserva</a><a href="index.html#servicios">Servicios</a><a href="index.html#contacto">Contactos</a><a href="index.html#resenas">Reseñas</a><a class="navcta" href="https://wa.me/5353182091" target="_blank" rel="noopener">WhatsApp</a></div></div></nav>
+<nav><div class="wrap navinner"><a class="brand" href="#inicio">VILLAR <span>BOLETOS</span></a><div class="navlinks"><a href="#promociones">Promociones</a><a href="#reserva">Solicita tu reserva</a><a href="#servicios">Servicios</a><a href="#contacto">Contactos</a><a href="#resenas">Reseñas</a><a class="navcta" href="https://wa.me/5353182091" target="_blank" rel="noopener">WhatsApp</a></div></div></nav>
 <main>
 <section id="promociones"><div class="wrap">
   <div class="section-head"><div class="kicker">Explora las opciones</div><h2>Rutas y promociones aéreas</h2><p>Consulta las ofertas disponibles y solicita una cotización personalizada. Podemos orientarte sobre otras rutas según tus necesidades.</p></div>
@@ -157,7 +166,8 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
     <article class="card"><img src="intercaribbean.webp" alt="Vuelos InterCaribbean Santiago de Cuba a Kingston" data-zoom loading="lazy" decoding="async"><div class="promo-caption">Trato presencial en la provincia de Camagüey</div><div class="card-body"><div class="tag">09 · Cuba – Jamaica</div><h3>INTERCARIBBEAN</h3><p>Conexión Santiago de Cuba–Kingston. Confirma fecha de salida, conexiones y tarifa antes de reservar.</p><a class="small-link" href="https://wa.me/5353182091?text=Hola%2C%20quiero%20consultar%20InterCaribbean%20a%20Kingston">Consultar vuelo →</a></div></article>
   </div>
 </div></section>
-<section class="reservation-cta top"><div class="wrap"><h2>✈ ¡TU PRÓXIMO VIAJE COMIENZA AQUÍ!</h2><p>Haz clic en el botón y completa nuestro formulario para solicitar la gestión de tu reserva.</p><a class="btn" href="index.html#reserva">QUIERO SOLICITAR MI RESERVA →</a></div></section>
+<!-- ✅ CAMBIO: href corregido a #reserva -->
+<section class="reservation-cta top"><div class="wrap"><h2>✈ ¡TU PRÓXIMO VIAJE COMIENZA AQUÍ!</h2><p>Haz clic en el botón y completa nuestro formulario para solicitar la gestión de tu reserva.</p><a class="btn" href="#reserva">QUIERO SOLICITAR MI RESERVA →</a></div></section>
 <section class="reservation-section" id="reserva"><div class="wrap">
   <div class="section-head"><div class="kicker">Planifica tu próximo viaje</div><h2>Solicita tu reserva</h2></div>
   <p class="reservation-intro">Completa los datos de tu viaje y nuestro equipo recibirá tu solicitud por WhatsApp para revisar las opciones y atenderte personalmente.</p>
@@ -184,7 +194,7 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
       <p class="file-note" style="text-align:center">Al continuar, podrás enviar la misma solicitud a cualquiera de los dos contactos de Villar Boletos.</p>
     </form>
     <div class="success-note" id="successNote">Su solicitud será atendida en la menor brevedad posible. Gracias por confiar en nosotros.</div>
-    <div class="send-options" id="sendOptions"><strong>Atención 24/7</strong><p>Elige el número de WhatsApp al que deseas enviar tu solicitud. Para que recibamos los pasaportes, recuerda adjuntarlos manualmente en WhatsApp antes de pulsar Enviar.</p><div class="send-buttons"><a id="sendPrimary" href="index.html#" target="_blank" rel="noopener">+53 53182091</a><a id="sendSecondary" href="index.html#" target="_blank" rel="noopener">+53 55447804</a><a id="sendTertiary" href="index.html#" target="_blank" rel="noopener">+53 56243038</a></div></div>
+    <div class="send-options" id="sendOptions"><strong>Atención 24/7</strong><p>Elige el número de WhatsApp al que deseas enviar tu solicitud. Para que recibamos los pasaportes, recuerda adjuntarlos manualmente en WhatsApp antes de pulsar Enviar.</p><div class="send-buttons"><a id="sendPrimary" href="#" target="_blank" rel="noopener">+53 53182091</a><a id="sendSecondary" href="#" target="_blank" rel="noopener">+53 55447804</a><a id="sendTertiary" href="#" target="_blank" rel="noopener">+53 56243038</a></div></div>
   </div>
 </div></section>
 <section class="services" id="servicios"><div class="wrap"><div class="section-head"><div class="kicker">A tu lado en cada paso</div><h2>¿Qué podemos gestionar?</h2><p>Un servicio pensado para que puedas consultar, comparar y organizar tu viaje con acompañamiento personal.</p></div>
@@ -225,7 +235,8 @@ footer{background:#061d36;color:#d6e1eb;padding:28px 0;font-size:12px}.foot{disp
 <button type="button" class="btn-wa-review" id="btnSendReview">📲 Enviar reseña al grupo Villar & Family</button>
 <p class="review-help">Tu reseña no aparecerá inmediatamente en la web. Luis o Liusbel la revisarán en el grupo antes de publicarla.</p>
 </form></div></div></section>
-<section class="reservation-cta bottom"><div class="wrap"><h2>¿YA TIENES EN MENTE TU PRÓXIMO DESTINO?</h2><p>No esperes más. Haz clic y envíanos los datos de tu viaje; te atenderemos personalmente.</p><a class="btn" href="index.html#reserva">✈ HAZ CLIC AQUÍ PARA SOLICITAR TU RESERVA</a></div></section>
+<!-- ✅ CAMBIO: href corregido a #reserva -->
+<section class="reservation-cta bottom"><div class="wrap"><h2>¿YA TIENES EN MENTE TU PRÓXIMO DESTINO?</h2><p>No esperes más. Haz clic y envíanos los datos de tu viaje; te atenderemos personalmente.</p><a class="btn" href="#reserva">✈ HAZ CLIC AQUÍ PARA SOLICITAR TU RESERVA</a></div></section>
 <section class="visitor-counter" aria-label="Contador de visitas"><strong>🌎 VISITAS A VILLAR BOLETOS</strong><a href="https://hits.sh/villarfamily.github.io/villarventaboletos/" target="_blank" rel="noopener" aria-label="Ver estadísticas de visitas"><img src="https://hits.sh/villarfamily.github.io/villarventaboletos.svg?view=total&style=for-the-badge&label=VISITAS" alt="Contador de visitas totales a Villar Boletos"></a></section>
 <section class="team-section"><div class="wrap"><div class="section-head"><div class="kicker">Nuestro equipo</div><h2>Juntos por un mismo objetivo</h2><p>Un equipo familiar a tu lado para acompañarte en cada viaje.</p></div><img class="team-art" src="villar-family-contactos.webp" alt="Villar & Family Group, equipo familiar de Villar Boletos" loading="eager" decoding="async" fetchpriority="high"><div class="team-contacts"><strong>Contactos actualizados de atención 24/7</strong><p>Luis: <a href="https://wa.me/5353182091">+53 53182091</a> · Liusbel: <a href="https://wa.me/5355447804">+53 55447804</a> · Ana: <a href="https://wa.me/5356243038">+53 56243038</a></p><p>Correo de Liusbel: <a href="mailto:villarliusbel@gmail.com">villarliusbel@gmail.com</a></p></div></div></section>
 <footer><div class="wrap foot"><span>© <span id="year"></span> <strong>VILLAR BOLETOS</strong> · Gestión y venta de boletos aéreos</span><span>En colaboración con <strong>Caribbean Passion Jamaica</strong></span></div></footer>
@@ -262,24 +273,39 @@ document.getElementById('close').addEventListener('click',closeBox);
 box.addEventListener('click',e=>{if(e.target===box)closeBox()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox()});
 
-// LÓGICA PARA ENVIAR RESEÑA AL GRUPO DE WHATSAPP
+// ✅ CAMBIO: Lógica de reseña corregida.
+// Antes usaba chat.whatsapp.com?text= que NO funciona (WhatsApp ignora el texto en links de grupo).
+// Ahora copia el mensaje al portapapeles, abre el grupo y avisa al usuario que debe pegarlo.
 document.getElementById('btnSendReview').addEventListener('click', function() {
   const name = document.getElementById('reviewName').value.trim();
   const rating = document.getElementById('reviewRating').value;
   const text = document.getElementById('reviewText').value.trim();
-  
+
   if(!name || !rating || text.length < 10) {
     alert('Por favor, completa tu nombre, selecciona una calificación y escribe al menos 10 caracteres en tu opinión.');
     return;
   }
 
   const stars = '⭐'.repeat(parseInt(rating));
-  const message = `Hola Villar & Family, aquí está mi reseña:\n\n*Nombre:* ${name}\n*Calificación:* ${stars} (${rating}/5)\n*Opinión:* ${text}\n\n_(Recuerden que adjuntaré mi foto en este chat manualmente)_`;
-  
+  const message = 'Hola Villar & Family, aquí está mi reseña:\n\n*Nombre:* ' + name + '\n*Calificación:* ' + stars + ' (' + rating + '/5)\n*Opinión:* ' + text + '\n\n_(Adjuntaré mi foto en este chat manualmente)_';
+
   const groupLink = 'https://chat.whatsapp.com/EioZdlgfzZ4DfZn7w0OQyX';
-  const waUrl = groupLink + '?text=' + encodeURIComponent(message);
-  
-  window.open(waUrl, '_blank');
+
+  // Copiar al portapapeles (funciona en móvil y escritorio modernos)
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(message).then(function() {
+      alert('✅ Tu reseña se ha copiado al portapapeles.\n\nAl abrir WhatsApp, MANTÉN PULSADO el campo de mensaje y elige "Pegar" (o pulsa Ctrl+V). Después pulsa Enviar.');
+      window.open(groupLink, '_blank');
+    }).catch(function() {
+      // Fallback si el navegador bloquea el portapapeles
+      prompt('Copia manualmente este texto, luego pégalo en el grupo de WhatsApp:', message);
+      window.open(groupLink, '_blank');
+    });
+  } else {
+    // Fallback para navegadores antiguos
+    prompt('Copia manualmente este texto, luego pégalo en el grupo de WhatsApp:', message);
+    window.open(groupLink, '_blank');
+  }
 });
 </script>
 </body></html>
